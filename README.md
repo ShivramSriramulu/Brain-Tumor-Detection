@@ -208,3 +208,13 @@ If you use this work in your research, please cite:
   url={https://github.com/yourusername/brain-tumor-detection}
 }
 ``` 
+## Overview
+- MRI-based brain tumor detection.
+- Baseline pipeline with data preprocessing, model training, and evaluation.
+
+## Quickstart
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python main.py --help
+```
