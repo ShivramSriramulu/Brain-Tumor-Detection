@@ -50,6 +50,7 @@ pip install -r requirements.txt
 
 ## Quickstart
 
+### Web Interface
 1. Start the web application:
 ```bash
 streamlit run webapp.py
@@ -58,6 +59,15 @@ streamlit run webapp.py
 2. Open browser to http://localhost:8501
 3. Upload an MRI image and adjust threshold
 4. Click "Predict" for tumor detection
+
+### Command Line Interface
+```bash
+# Predict tumor in a single image
+python main.py --mode predict --predict path/to/image.png --threshold 0.3
+
+# Show help
+python main.py --help
+```
 
 ## Data
 
@@ -84,11 +94,35 @@ The model was trained using the Jupyter notebook `Brain Tumor Detection.ipynb`:
 - **Optimizer**: Adam
 - **Loss**: Binary crossentropy
 
+### Training Commands
+```bash
+# Using the main script (placeholder implementation)
+python main.py --mode train --data_dir data --epochs 50 --batch_size 32
+
+# Using the shell script
+./scripts/train.sh
+
+# Using the Jupyter notebook (recommended)
+jupyter notebook "Brain Tumor Detection.ipynb"
+```
+
 ## Evaluation & Metrics
 
 - **Accuracy**: 91% on test set
 - **Model**: Saved as `cnn-parameters-improvement-23-0.91.model`
 - **Evaluation**: Run through notebook or use `predict.py` for inference
+
+### Evaluation Commands
+```bash
+# Using the main script (placeholder implementation)
+python main.py --mode evaluate --data_dir data
+
+# Using the shell script
+./scripts/eval.sh
+
+# Using the Jupyter notebook (recommended)
+jupyter notebook "Brain Tumor Detection.ipynb"
+```
 
 ## Results
 
